@@ -1,0 +1,12 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "App"
+include ':app','externalLib1','externalLib2'
+project(':externalLib1').projectDir = new File('../externalLib1/extLib1')
+project(':externalLib2').projectDir = new File('../externalLib2/extLib2')
